@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduCheckers – оқи отырып ойна!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Басты бет -->
+  <section id="home">
+    <h1>EduCheckers – оқи отырып ойна!</h1>
+    <p>Шашки ойнап қана қоймай, әр қадам сайын қазақ тілінің грамматикалық тақырыбын меңгер!</p>
+    <div class="buttons">
+      <button onclick="showRules()">Ережелерді қарау</button>
+      <button onclick="startGame()">Ойнауды бастау</button>
+      <button onclick="showTeacher()">Мұғалімге арналған бөлім</button>
+    </div>
+  </section>
+
+  <!-- Ереже бөлімі -->
+  <section id="rules" class="hidden">
+    <h2>Ойын ережесі</h2>
+    <ul>
+      <li>8×8 тақтада классикалық шашки ойнау.</li>
+      <li>Барлық шашкаларда қазақ тілінің грамматикалық (шылау) сұрақтары бар.</li>
+      <li>Дұрыс жауап → шашка жүреді.</li>
+      <li>Қате жауап → жүріс болмайды немесе қарсылас бір қадам алады.</li>
+      <li>Жеген шашка → қарсы жақтағы бос шаршыға қайта тіріледі.</li>
+    </ul>
+    <button onclick="showHome()">Басты бетке қайту</button>
+  </section>
+
+  <!-- Ойын бөлімі -->
+  <section id="game" class="hidden">
+    <h2>Ойын</h2>
+    <div id="board"></div>
+    <div id="question">
+      <p id="question-text"></p>
+      <div id="answers"></div>
+    </div>
+    <button onclick="showHome()">Басты бетке қайту</button>
+  </section>
+
+  <!-- Мұғалімге арналған -->
+  <section id="teacher" class="hidden">
+    <h2>Мұғалімге арналған бөлім</h2>
+    <ul>
+      <li>Ойынды қалай өткізуге болады және деңгей таңдау.</li>
+      <li>Қиындық деңгейін оқушыларға сай таңдаңыз.</li>
+      <li>Қай тақырыпты көп қайталау керек екенін статистика арқылы бақылау.</li>
+      <li>Тапсырмалар, қосымша ресурстар, марапаттар.</li>
+    </ul>
+    <button onclick="showHome()">Басты бетке қайту</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
